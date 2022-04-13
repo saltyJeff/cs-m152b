@@ -73,7 +73,17 @@ module sixteen_bit_slt(
     
     and(neg_res, is_neg, neg_out);
     
+    wire [15:0] xor_out;
+    sixteen_bit_xor xor_gen(.a(a), .b(b), .out(xor_out));
+    wire zero;
+    zero_check zero_chk(zero, xor_out);
+    
+    
+    
     wire or1;
     or(or1, pos_res, diff_res);
-    or(out, or1, neg_res);
+    
+    wire out_temp;
+    or(out_temp, or1, neg_res);
+    or (out, out_temp, zero);
 endmodule

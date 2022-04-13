@@ -117,6 +117,7 @@ module sixteen_bit_alu(
     
     wire [15:0] or_out;
     sixteen_bit_or or_generator (.a(a), .b(b), .out(or_out));
+ 
     
     
     sixteen_to_one_mux #(.WIDTH(16)) out_mux (aluCtrl, sub_out, adder_out, or_out, and_out, decrement_out, increment_out, inverter_out, 0, lsl_out, slt_out, lsr_out, 0, asl_out, 0, asr_out, 0, s);

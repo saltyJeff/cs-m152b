@@ -128,7 +128,9 @@ module testbench_sixteen_bit_alu(
         #10;
         a = 'h8000;
         b = 'h7fff;
-        #15;
+        #10;
+        a = 6;
+        b = 6;
         
 ////        for(i = 0; i < 16; i=i+1) begin
 //            alu_ctrl = 4;

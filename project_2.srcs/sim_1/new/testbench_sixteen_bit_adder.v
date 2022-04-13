@@ -43,8 +43,8 @@ module testbench_sixteen_bit_adder();
             ci = 0;
             #5; // wait for period 
             
-            a = 0;
-            b = 1;
+            a = 500;
+            b = 20;
             ci = 0;
             #5; // wait for period 
             
